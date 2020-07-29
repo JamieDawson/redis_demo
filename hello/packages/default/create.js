@@ -11,8 +11,10 @@ async function main(args) {
   const value = JSON.stringify(args.value || {})
   const ret = await redis.setAsync(key, value);
   return {
-    status: ret,
-    id: key
+    body: {
+      status: ret,
+      id: key
+    }
   }
 }
 

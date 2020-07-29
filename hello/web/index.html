@@ -10,15 +10,15 @@
 
     <h2>HTML Forms</h2>
     <input type="text" id="value" name="value" placeholder="here"><br>
-    <button onclick="doit()">submit here</button>
+    <button onclick="doit()">Submit</button>
     <div id="result"></div>
 
     <script type="text/javascript">
         function doit() {
             var txt = $("#value").val().trim()
-            let API = '/api/default/create'
-            let src = API + '?value=' + escape(txt)
-            console.log("sending", src);
+            let API = "/api/default/create"
+            let src = API + "?value=" + escape(txt)
+            console.log("sending", src)
             $.get(src, function (data, status) {
                 console.log("status: ", status)
                 $("#result").html(JSON.stringify(data))
