@@ -5,16 +5,16 @@
     "packageVersions": {},
     "actionVersions": {
       "create": {
-        "version": "0.0.29",
-        "digest": "2d1be73d6f7721c8d96061546f9d2d173d18439a2a5513e14126331950ad4185"
+        "version": "0.0.37",
+        "digest": "02b20790edde3d6006104bb7d67fbff05f3bc196536965eefd12f4b9806fa171"
       },
       "get": {
-        "version": "0.0.28",
+        "version": "0.0.36",
         "digest": "d0f8b2aa1d1c1aa535c7e0a2666ba9e02591878f67f5f8cfa51148f117ecf124"
       }
     },
     "webHashes": {
-      "web\\index.html": "363ed9d0fc6c29998fb83cdf5331997e25f484f89bbd848396150fcd46fbfa4f"
+      "web\\index.html": "92f85bf1f00486892607f284adfdd30ffc190b616f95b4e88e69b1b2e43c1808"
     }
   }
 ]
