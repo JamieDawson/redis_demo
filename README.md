@@ -13,3 +13,13 @@
 6. You will recieve a URL in the Command Prompt. It will look something like `https://(YOUR-NAMESPACE-HERE)-apigcp.nimbella.io`
 
 7. Take that URL and paste it in your browser!
+
+### How to test the project.
+
+1. Enter text in the first feild.
+
+2. Copy the ID and paste it in the second field.
+
+3. It will return the value of the ID.
+
+4. You now have a working key-value storage
