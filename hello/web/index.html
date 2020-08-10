@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  </head>
 
-  <body>
-    <h2>HTML Forms</h2>
-    <input type="text" id="value" name="value" placeholder="here" /><br />
-    <button onclick="doit()">Submit</button>
-    <div id="result"></div>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body onload="get()">
+
+    <h2>Demo Using Nimbella KV</h2>
+
+    Enter text to store:<br>
+    <input type="text" id="value" name="value" placeholder="type some text here."><br>
+    <button onclick="create()">Submit</button>
+
+    Enter id:<br>
+    <input type="text" id="id" name="id" placeholder="type an id."><br>
+    <button onclick="get()">Submit</button>
+
+    <div id="result">
+    </div>
 
     <script type="text/javascript">
-      function doit() {
-        var txt = $('#value').val().trim();
-        let API = '/api/default/create';
-        let src = API + '?value=' + escape(txt);
-        console.log('sending', src);
-        $.get(src, function (data, status) {
-          console.log('status: ', status);
-          $('#result').html(JSON.stringify(data));
-        });
-      }
-    </script>
-  </body>
-</html>
+        function create() {
+            var txt = $("#value").val().trim()
+            let API = '/api/default/create'
+            let src = API + '?value=' + escape(txt)
+            console.log("sending", src)
+            $.get(src, function (data, status) {
+                console.log("status", status)
+                $("#result").html(JSON.stringify(data))
+            })
+        }
 
-<!-- test -->
+        function get() {
+            var txt = $("#id").val().trim()
+            let API = '/api/default/get'
+            let src = API + '?id=' + escape(txt)
+            console.log("sending", src)
+            $.get(src, function (data, status) {
+                console.log("status", status)
+                $("#result").html(JSON.stringify(data))
+            })
+        }
+    </script>
+
+</body>
+
+</html>
